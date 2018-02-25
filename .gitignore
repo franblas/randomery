@@ -1,0 +1,8 @@
+*.pyc
+*.log
+*.DS_Store
+tmp/
+venv/
+*.json
+unwanted_urls
+phantomjs
