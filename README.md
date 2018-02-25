@@ -8,6 +8,7 @@ Random links from the web
 - Install python packages
 ```bash
 pip install virtualenv
+virtualenv venv
 source venv/bin/activate # . venv/bin/activate
 pip install -r requirements.txt
 ```

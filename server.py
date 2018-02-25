@@ -19,7 +19,7 @@ from lib.parser import magic_decoding, magic_parser, build_discovery_kwargs, par
 from lib.urls_filter import get_local_unwanted_urls, is_clean_link
 
 CONFIG = load_config()
-MONGO_CONN = None
+MONGO_CONN = db_connect()
 
 DEBUG = os.environ.get('FLASK_DEBUG', True)
 REDIRECT_CODE = 302
@@ -31,6 +31,7 @@ SESSION_USERNAME = '{}-username'.format(WEBSITE_TITLE.lower().strip())
 SESSION_LINK = '{}-link'.format(WEBSITE_TITLE.lower().strip())
 
 app = Flask(__name__, static_url_path='', template_folder='templates')
+app.secret_key = CONFIG.get('APP_SECRET_KEY')
 
 @app.before_request
 def before_request():
@@ -175,6 +176,4 @@ def addlink():
                             green_color, 'Thanks for your contribution!'))
 
 if __name__ == '__main__':
-    MONGO_CONN = db_connect()
-    app.secret_key = CONFIG.get('APP_SECRET_KEY')
     app.run(host='0.0.0.0', port=CONFIG.get('PORT', 4000), debug=DEBUG)
