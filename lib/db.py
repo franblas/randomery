@@ -183,14 +183,6 @@ def get_random_item(conn, mobile):
         {'$sample': {'size': 1}}
     ])
     random_result = [c for c in cursor][0]
-    print random_result
-    # random_result = {
-    #     'filename': 'https://www.kickstarter.com/projects/1075898346/euclid-a-more-accurate-measuring-cup?ref=producthunt',
-    #     'metadata': {
-    #         'link': 'https://www.kickstarter.com/projects/1075898346/euclid-a-more-accurate-measuring-cup?ref=producthunt',
-    #         'title': 'AAAA test'
-    #     }
-    # }
     grid_conn = gridfs.GridFS(conn[MONGO_DATABASE], collection=data_collection)
     results = [a for a in grid_conn.find({'filename': random_result.get('filename')})]
     if len(results) > 0:
