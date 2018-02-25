@@ -1,4 +1,4 @@
-# Randomery
+# Randomery &#9861;
 Random links from the web
 
 ## Requirements
