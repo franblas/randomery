@@ -23,7 +23,7 @@ Put the configuration into `config.json` file with the following format
   "PORT": 4000,
   "APP_SECRET_KEY": "abcd1234",
   "WEBSITE_TITLE": "MyWebsite",
-  "MONGO_HOST": "localhost",
+  "MONGO_URI": "mongodb://localhost:27017",
   "feeder": {
     "PHANTOM_JS_DRIVER_ARGS": ["--web-security=no", "--ssl-protocol=any", "--ignore-ssl-errors=yes"],
     "PAGE_LOAD_TIMEOUT": 120,
