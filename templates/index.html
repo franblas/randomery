@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ website_title }}</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="css/{{ mobile }}the-index-style.css">
+</head>
+<body>
+<div id="the-left-container">&#9861;</div>
+<div id="the-right-container">
+  <div id="the-empty-container"></div>
+  <div id="the-title-container">
+    {{ website_title }}<br/><div style="font-size:30%;font-style:italic;">Random links from the web</div>
+  </div>
+  <div id="the-forms-container">
+    <div id="the-login-container">
+      <form method="post" action="login" class="the-form-object">
+        <table border="0" class="the-table-object">
+          <tr>
+            <td>username</td>
+            <td><input type="text" name="acct" size="20" autocorrect="off" spellcheck="false" autocapitalize="off" autofocus="true" class="the-form-input" placeholder="user" required></td>
+          </tr>
+          <tr>
+            <td>password</td>
+            <td><input type="password" name="pw" size="20" class="the-form-input" placeholder="****" required></td>
+          </tr>
+        </table>
+        <input type="submit" value="Login" class="the-form-button">
+      </form>
+    </div>
+    <div id="the-create-container">
+      <form method="post" action="create" class="the-form-object">
+        <table border="0" class="the-table-object">
+          <tr>
+            <td>username</td>
+            <td><input type="text" name="acct" size="20" autocorrect="off" spellcheck="false" autocapitalize="off" class="the-form-input" placeholder="user" required></td>
+          </tr>
+          <tr>
+            <td>password</td>
+            <td><input type="password" name="pw" size="20" class="the-form-input" placeholder="****" required></td>
+          </tr>
+        </table>
+        <input type="submit" value="Create account" class="the-form-button">
+      </form>
+    </div>
+  </div>
+  <div id="the-err-msg-container">{{ error_msg | default('') }}</div>
+</div>
+</body>
+</html>

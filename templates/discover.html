@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html id="the-html-container" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ website_title }}</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="css/{{ mobile }}the-discover-style.css">
+</head>
+<body id="the-body-container">
+  <script src="js/the-discover-script.js"></script>
+  <script>historyPushState("{{ website_title }}")</script>
+  <div id="the-loader-container" style="{{ the_loader_container }}"><div id="the-loader-object" style="{{ the_loader_object }}"></div></div>
+  <div id="the-top-bar-container" style="{{ the_top_bar_container }}">
+    <div id="the-dice-object" style="{{ the_dice_object }}" onclick="refreshUrl()" onmouseover="startDiceAnimation()" onmouseout="stopDiceAnimation()">&#9861;</div>
+    <div id="the-title-object" style="{{ the_title_object }}" onclick="openLink('{{ link }}')">{{ title }}</div>
+    <div id="the-menu-object" style="{{ the_menu_object }}" class="rotate-menu" onclick="openMenu()">&#9776;</div>
+  </div>
+  <div id="the-menu-container" style="{{ the_menu_container }}">
+    <div id="the-username-object" style="{{ the_username_object }}">{{ username }}</div>
+    <div id="the-post-link-object" style="{{ the_post_link_object }}" class="a-menu-object"><a style="{{ a_menu_object_link }}" class="a-menu-object-link" href="/addlink">&#8682;&nbsp;&nbsp;Submit a link</a></div>
+    <div id="the-logout-object" style="{{ the_logout_object }}" class="a-menu-object"><a style="{{ a_menu_object_link }}" class="a-menu-object-link" href="/logout">&#8690;&nbsp;&nbsp;Logout</a></div>
+  </div>
+  <div id="the-big-container" style="{{ the_big_container }}" onclick="closeMenu()">
+    {{ content | safe }}
+  </div>
+  <script>removeUnwantedClasses()</script>
+</body>
+</html>

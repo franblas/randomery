@@ -1,0 +1,50 @@
+/** the-index-style.css **/
+
+@import 'shared/shared-index.css';
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Lucida Sans', Arial, sans-serif;
+  background-color: #141414;
+  display: flex;
+}
+
+#the-left-container {
+  width: 50%;
+  text-align: center;
+  font-size: 3500%;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+#the-right-container {
+  width: 50%;
+  text-align: center;
+  color: #ffffff;
+  display: block;
+}
+
+#the-empty-container {
+  width: 100%;
+  height: 20%;
+}
+
+#the-forms-container {
+  width: 100%;
+  height: 40%;
+  display: flex;
+}
+
+#the-login-container {
+  width: 50%;
+  height: 65%;
+  border-right: 1px solid #ffffff;
+}
+
+#the-create-container {
+  width: 50%;
+  height: 70%;
+}

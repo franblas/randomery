@@ -1,0 +1,44 @@
+/** the-shared-index-style.css **/
+
+#the-title-container {
+  width: 100%;
+  height: 20%;
+  font-size: 300%;
+  color: #ffffff;
+}
+
+.the-form-object {
+  display: inline-block;
+  text-align: center;
+}
+
+.the-table-object {
+  color: #ffffff;
+}
+
+.the-form-button {
+  width: 100%;
+  background-color: #ffffff;
+  color: #141414;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 90%;
+}
+
+.the-form-button:hover {
+  background-color: #efefef;
+}
+
+.the-form-input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 0;
+}
+
+#the-err-msg-container {
+  width: 100%;
+  height: 10%;
+  color: #e74c3c;
+}

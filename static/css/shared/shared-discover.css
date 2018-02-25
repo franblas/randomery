@@ -1,0 +1,138 @@
+/** the-shared-discover-style.css **/
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+html, body {
+  all: initial;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Lucida Sans',Arial,sans-serif;
+}
+
+#the-loader-container {
+  all: initial;
+  display: none;
+  position: fixed;
+  z-index: 2147483647 !important;
+  background: rgba(0,0,0,0.3);
+  width: 100%;
+  height: 97.5%;
+  top: 2.5%;
+}
+
+#the-loader-object {
+  border: 8px solid #f4f4f4;
+  border-radius: 50%;
+  border-top: 8px solid #141414;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+#the-top-bar-container {
+  all: initial;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #ffffff;
+  background: #141414;
+  height: 5%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  z-index: 2147483647 !important;
+}
+
+#the-menu-object {
+  width: 5%;
+  cursor: pointer;
+  text-align: center;
+  color: #ffffff;
+  font-size: 150%;
+  line-height: 155%;
+}
+
+.rotate-menu {
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+
+  -webkit-transition: 300ms linear all;
+  -moz-transition: 300ms linear all;
+  -o-transition: 300ms linear all;
+  transition: 300ms linear all;
+}
+
+.rotate-menu:hover {
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+
+  -webkit-transition: 300ms linear all;
+  -moz-transition: 300ms linear all;
+  -o-transition: 300ms linear all;
+  transition: 300ms linear all;
+}
+
+#the-username-object {
+  width: 100%;
+  height: 20%;
+  border-bottom: 1px solid #ffffff;
+}
+
+#the-post-link-object {
+  width: 100%;
+  height: 40%;
+  border-bottom: 1px solid #ffffff;
+  cursor: pointer;
+}
+
+#the-logout-object {
+  width: 100%;
+  height: 40%;
+  cursor: pointer;
+}
+
+.a-menu-object:hover {
+  color: #efefef;
+}
+
+.a-menu-object-link {
+  all: initial;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  line-height: 300%;
+  cursor: pointer;
+}
+
+.a-menu-object-link:hover {
+  all: initial;
+  color: #efefef;
+}
+
+#the-big-container {
+  width: 100%;
+  height: 94%;
+  padding-top: 3%;
+  position: absolute;
+  z-index: 2147483646 !important;
+}

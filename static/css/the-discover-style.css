@@ -1,0 +1,40 @@
+/** the-discover-style.css **/
+
+@import 'shared/shared-discover.css';
+
+#the-dice-object {
+  width: 5%;
+  cursor: pointer;
+  text-align: center;
+  font-size: 320%;
+  line-height: 0.6;
+  color: #ffffff;
+}
+
+#the-title-object {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  line-height: 26px;
+  text-indent: 30px;
+  cursor: pointer;
+}
+
+#the-menu-container {
+  all: initial;
+  display: none;
+  right: 0;
+  color: #ffffff;
+  background-color: #141414;
+  text-align: center;
+  height: 15%;
+  width: 10%;
+  top: 5%;
+  position: fixed;
+  z-index: 2147483647 !important;
+}

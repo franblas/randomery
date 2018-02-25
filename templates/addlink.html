@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ website_title }}</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="css/the-addlink-style.css">
+</head>
+<body>
+  <div style="width:100%;height:20%;"></div>
+  <div id="the-title-container">Contribute by adding a link</div>
+  <div style="width:100%;height:35%;">
+    <div style="width:100%;height:70%;">
+      <form method="post" action="addlink" class="the-form-object">
+        <table border="0" class="the-table-object">
+          <tr>
+            <td>link</td>
+            <td><input type="text" name="link" size="50" autocorrect="off" spellcheck="false" autocapitalize="off" autofocus="true" class="the-form-input" placeholder="https://randomery.xyz" required></td>
+          </tr>
+          <tr>
+            <td>title</td>
+            <td><input type="text" name="title" size="50" autocorrect="off" spellcheck="false" autocapitalize="off" class="the-form-input" placeholder="{{ website_title }}, random links from the web" required></td>
+          </tr>
+        </table><br>
+        <input type="submit" value="Contribute" class="the-form-button">
+      </form>
+    </div>
+  </div>
+  <div id="the-msg-container">{{ msg | safe | default('') }}</div>
+  <div id="the-discover-link-container">
+    <a id="the-discover-link-object" href="/discover">Back to the discovery page</a>
+  </div>
+</body>
+</html>
